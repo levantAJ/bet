@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface leeViewController : UIViewController
+@interface leeViewController : UIViewController{
+    IBOutlet UILabel *lblTitle;
+    IBOutlet UIButton *btnStart;
+}
 
 @end

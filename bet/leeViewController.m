@@ -17,13 +17,6 @@
 
 @implementation leeViewController
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    [self initBet];
-	// Do any additional setup after loading the view, typically from a nib.
-}
-
 bool train = false;
 bool helocopter = false;
 bool taxi = false;
@@ -43,10 +36,19 @@ NSString *vRocket = @"🚀";
 NSTimer *timer;
 NSUInteger maxValue = 1150;
 
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    UIFont *font = [UIFont fontWithName:@"04b_19" size:29];
+    [lblTitle setFont:font];
+    [btnStart.titleLabel setFont:font];
+    [self initBet];
+    // Do any additional setup after loading the view, typically from a nib.
+}
+
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -57,7 +59,7 @@ NSUInteger maxValue = 1150;
 -(void)initBet
 {
     NSUInteger height = 310;
-    NSUInteger top = 223;
+    NSUInteger top = 245;
     int left = -110;
     int distance = 57.5;
     UIView *vView = (UIView *)[self.view viewWithTag:18];
